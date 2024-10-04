@@ -1,0 +1,25 @@
+<div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4">All Shortened URLs</h2>
+    <table class="min-w-full bg-white">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="py-2 px-4 text-left">Original URL</th>
+                <th class="py-2 px-4 text-left">Shortened URL</th>
+                <th class="py-2 px-4 text-left">Clicks</th>
+                <th class="py-2 px-4 text-left">Details</th>
+                <th class="py-2 px-4 text-left">Stats</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% urls?.forEach(function(url) { %>
+                <tr class="border-b">
+                    <td class="py-2 px-4"><a href="<%= url.longUrl %>" target="_blank" class="text-blue-600"><%= url.longUrl %></a></td>
+                    <td class="py-2 px-4"><a href="/<%= url.shortCode %>" class="text-blue-600">http://localhost:5000/<%= url.shortCode %></a></td>
+                    <td class="py-2 px-4"><%= url.clicks %></td>
+                    <td class="py-2 px-4"><a href="/details/<%= url.shortCode %>" class="text-blue-600">View Details</a></td>
+                    <td class="py-2 px-4"><a href="/stats/<%= url.shortCode %>" class="text-blue-600">View Stats</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>

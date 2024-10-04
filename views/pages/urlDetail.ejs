@@ -1,0 +1,6 @@
+<div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold mb-4">Your Shortened URL</h2>
+    <p>Original URL: <a href="<%= url.longUrl %>" target="_blank" class="text-blue-600"><%= url.longUrl %></a></p>
+    <p>Shortened URL: <a href="/<%= url.shortCode %>" class="text-blue-600">http://localhost:5000/<%= url.shortCode %></a></p>
+    <p>Total Clicks: <%= url.clicks %></p>
+</div>
