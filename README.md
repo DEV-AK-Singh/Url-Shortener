@@ -1,5 +1,7 @@
 
-# URL Shortener Project
+# URL Shortener 
+
+## Project Overview
 
 This project is a **URL Shortener** built using **EJS**, **Express**, **Node.js**, **MongoDB**, and **TailwindCSS**. It allows users to shorten long URLs and retrieve them via a shortened URL. The app also tracks how many times a shortened URL has been accessed.
 
